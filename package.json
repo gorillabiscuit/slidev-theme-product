@@ -1,0 +1,38 @@
+{
+  "name": "slidev-theme-product",
+  "version": "0.1.0",
+  "description": "A Slidev theme inspired by Apple product pages — large display type, generous whitespace, restrained palette, animated bar charts.",
+  "keywords": [
+    "slidev-theme",
+    "apple",
+    "minimal",
+    "product",
+    "presentation",
+    "keynote"
+  ],
+  "homepage": "https://github.com/gorillabiscuit/slidev-theme-product",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorillabiscuit/slidev-theme-product"
+  },
+  "license": "MIT",
+  "author": "Wouter Schreuders",
+  "exports": {
+    ".": "./styles/index.css"
+  },
+  "main": "./styles/index.css",
+  "files": [
+    "styles",
+    "example.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@slidev/cli": ">=0.48"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.15.2"
+  }
+}
