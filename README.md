@@ -70,16 +70,33 @@ Override any token in your own `style.css`:
 
 ## Layouts
 
-Uses Slidev's built-in layouts. Recommended patterns:
+The theme ships its own `fact`, `statement`, `section`, `image-left`, and
+`image-right` layouts (the first three centre content reliably across viewport
+sizes and export; see note below). `two-cols`, `default`, and the cover
+layouts come from Slidev.
 
 | Layout | Use for |
 |---|---|
 | `intro-image-right` | Cover slide with photo |
-| `fact` | Single stat or number — fills the slide |
-| `section` | Chapter divider — `f5f5f7` background |
-| `statement` | Full-screen recommendation or conclusion |
+| `fact` | Single stat or number — centred, fills the slide |
+| `section` | Chapter divider — `f5f5f7` background, centred + left-anchored |
+| `statement` | Full-screen recommendation or conclusion — centred |
+| `image-left` / `image-right` | Full-bleed photo on one half, content on the other |
 | `two-cols` | Pros/cons, before/after comparisons |
 | `default` | Everything else |
+
+`image-left` / `image-right` take an `image:` (path or URL) and optional
+`backgroundSize:` (default `cover`) in frontmatter.
+
+> **Centring note.** `fact` / `statement` / `section` anchor their content to
+> `calc(50vh / var(--slidev-slide-scale))` so it sits at the true visual
+> midpoint regardless of viewport size or export. This is why the theme owns
+> these layouts rather than relying on Slidev's built-ins.
+
+> **Do not put `<style>` blocks inside `slides.md`.** An inline `<style>` in a
+> slide breaks Slidev's `v-click` counting (clicks skip to the next slide
+> instead of revealing). Put all custom CSS in the deck's `style.css`, or
+> override theme tokens there.
 
 ---
 
